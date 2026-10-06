@@ -34,6 +34,10 @@ jobs:
           if [ -n "$MISSING" ]; then BODY="$BODY
 
           These skills in \`.agents/sf-skills.txt\` no longer exist upstream and were removed: $MISSING"; fi
-          gh pr view "$BRANCH" >/dev/null 2>&1 \
-            && gh pr edit "$BRANCH" --body "$BODY" \
-            || gh pr create --head "$BRANCH" --title "Sync Salesforce skills" --body "$BODY"
+          if gh pr view "$BRANCH" >/dev/null 2>&1; then
+            gh pr edit "$BRANCH" --body "$BODY"
+          elif ! gh pr create --head "$BRANCH" --title "Sync Salesforce skills" --body "$BODY"; then
+            # Repo setting "Allow GitHub Actions to create and approve pull requests" is off.
+            # The branch is pushed; open the pull request from this link instead.
+            echo "Skills updated on branch $BRANCH. Open a pull request: ${{ github.server_url }}/${{ github.repository }}/compare/$BRANCH?expand=1" >> "$GITHUB_STEP_SUMMARY"
+          fi
