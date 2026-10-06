@@ -1,0 +1,69 @@
+# Salesforce skills synced from https://github.com/forcedotcom/sf-skills
+# One skill name per line. Run `bash scripts/sync-sf-skills.sh` after editing.
+# Put a single line "*" to install the whole library (not recommended: hundreds
+# of skills make it harder for AI tools to pick the right one).
+
+# Foundation: data model, declarative metadata, pages, automation, security
+platform-capability-search
+platform-environment-validate
+platform-custom-object-generate
+platform-custom-field-generate
+platform-validation-rule-generate
+platform-value-set-generate
+platform-custom-metadata-type-generate
+platform-custom-setting-generate
+platform-list-view-generate
+platform-custom-application-generate
+platform-custom-tab-generate
+platform-lightning-app-coordinate
+platform-flexipage-generate
+automation-flow-generate
+platform-permission-set-generate
+platform-sharing-owd-configure
+platform-sharing-rules-generate
+platform-report-generate
+platform-custom-report-type-generate
+
+# Schema and API reference (stops invented field and metadata names)
+platform-metadata-api-context-get
+platform-data-and-tooling-api-context-get
+platform-docs-get
+
+# Apex and SOQL
+platform-apex-generate
+platform-apex-test-generate
+platform-apex-test-run
+platform-apex-anonymous-run
+platform-apex-logs-debug
+platform-soql-query
+platform-lsp-integrate
+
+# Retrieve, validate and deploy
+dx-project-create
+dx-org-manage
+platform-metadata-retrieve
+platform-manifest-generate
+platform-deploy-validate
+platform-metadata-deploy
+platform-quick-deploy
+platform-data-manage
+
+# Quality gates
+dx-code-analyzer-configure
+dx-code-analyzer-run
+dx-code-analyzer-custom-rule-create
+platform-architecture-analyze
+design-systems-slds-apply
+design-systems-slds-validate
+design-systems-slds2-migrate
+
+# Education Cloud, Data 360 and Commerce
+education-cloud-domain-configure
+education-cloud-academic-calendar-generate
+education-cloud-course-catalog-migrate
+education-cloud-multi-campus-configure
+education-cloud-student-recruitment-agent-configure
+data360-schema-get
+commerce-b2b-store-create
+platform-policy-rule-generate
+external-diagram-mermaid-generate

@@ -1,0 +1,10 @@
+{
+  "extraKnownMarketplaces": {
+    "salesforce": {
+      "source": {
+        "source": "github",
+        "repo": "forcedotcom/sf-skills"
+      }
+    }
+  }
+}
